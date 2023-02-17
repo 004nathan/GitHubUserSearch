@@ -1,0 +1,82 @@
+<link href="/Css/index.css"  id="displayMode" rel="stylesheet" type="text/css"/>
+<div id="root">
+    <div class="container">
+        <div class="header">
+            <div class="heading"><h1>devfinder</h1></div>
+            <div class="darkThemeDiv">
+                <p>LIGHT</p>
+                <img src="/assets/icon-sun.svg" class='moonimg' onclick="changeTheme(this)"/>
+            </div>
+        </div>
+
+        <div class="search">
+        
+                        <img src="/assets/icon-search.svg" />
+                        <input type="text" value="" class="inputBoxSearch" placeholder="Search GitHub username…"/>
+                        <button onclick="getUser()" >Submit</button>
+                   
+        </div>
+        <div class="content">
+            <% if(data.hasOwnProperty('message')){%>
+                <%- include('./partials/response');%>
+            <%}else{%>
+                <div class="profile">
+                    <img src="<%=data.avatar_url%>" class="profileImg"/>
+                </div>
+                <div class="user">
+                    <div class="userDiv">
+                        <div class="userLink">
+                        <h1 class="userName"><%= data.login%></h1>
+                        <a href="<%=data.html_url%>" target="_blank">@<%= data.login%></a>
+                    </div>
+                    <% let month = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']%>
+                    <% let date =new Date(data.created_at)%>
+                    <% let final = `${date.getDate()} ${month[date.getMonth()]} ${date.getFullYear()}`%>
+                    <% console.log(final)%>
+                    <div class="createDiv">
+                    <span class="createDate">Joined   <%=final%></span>
+                </div>
+                    </div>
+                    <div class="userAbout">
+                        <h2><%= data.bio == null ? 'This profile has no bio':data.bio%></h2>
+                    </div>
+                    <div class="followDiv">
+                        <div class="repos">
+                            <p>Repos</p>
+                           
+                            <h1><%=data.public_repos%></h1>
+                        </div>
+                        <div class="follower">
+                            <p>Followers</p>
+                            <h1><%=data.followers%></h1>
+                        </div>
+                        <div class="following">
+                            <p>Following</p>
+                            <h1><%=data.following%></h1>
+                        </div>
+                    </div>
+                    <div  class="locationDetail">
+                        <div class="location">
+                            <img src="/assets/icon-location.svg"/>
+                            <p><%=data.location==null?'No location':data.location%></p>
+                        </div>
+                        <div class="twitter">
+                            <img src="/assets/icon-twitter.svg"/>
+                            <a href="#">Not Available</a>
+                        </div>
+                        <div class="github">
+                            <img src="/assets/icon-website.svg"/>
+                            <a href="<%=data.blog%>" target="_blank">github.blog</a>
+                        </div>
+                        <div class="github1">
+                            <img src="/assets/icon-company.svg"/>
+                            <p><%= data.company == null ?'@github':data.company%></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <%}%>
+           
+    </div>
+</div>
+<script src="JS/index.js"></script>

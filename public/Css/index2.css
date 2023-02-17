@@ -1,0 +1,226 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family:serif;
+    letter-spacing: 0.2vw;
+}
+#root{
+    height:100vh;
+    width:100vw;
+    background-color: #F2F2F2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    height:80vh;
+    width:50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.heading{
+color: #222731;
+margin-left: 2vw;
+}
+.header{
+    height:10vh;
+    width:50vw;
+    display: flex;
+    flex-direction: row;
+}
+.heading{
+    height:10vh;
+    width:40vw;
+    align-self: flex-start;
+}
+.darkThemeDiv img{
+    height: 3vh;
+}
+.darkThemeDiv{
+    margin-top: 1vh;
+    height: 10vh;
+    width: 10vw;
+    color: #222731;
+    font-size: 1.3vh;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+input:focus {
+    outline: none;
+  }
+::placeholder {
+    color: #222731;
+    opacity: 1; 
+    font-size: 2vh;
+    letter-spacing: 0.1vw;
+  }
+.search{
+    height:10vh;
+    width: 50vw;
+    background-color: #FEFEFE;
+    border-radius:1vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+}
+.inputBoxSearch{
+    height:5vh;
+    width:30vw;
+    border: none;
+    color: #222731;
+    font-size:2vh;
+    background-color: #FEFEFE;
+}
+.search img{
+    height: 3vh;
+}
+.search button{
+    height:5vh;
+    width:7vw;
+    color: #ffff;
+    border: none;
+    font-size: large;
+    border-radius: 1vh;
+    background-color: #0079FF;
+    cursor: pointer;
+}
+.search button:hover{
+    background-color: #60ABFF;
+}
+.profileImg{
+    height:15vh;
+    border-radius: 7vh;
+    margin-top:5vh;
+    margin-left: 2vh;
+}
+.profile{
+    height:50vh;
+    width: 10vw;
+    display: flex;
+    justify-content:center;
+    align-items:flex-start;
+}
+.user{
+    height: 50vh;
+    width:40vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    /* gap:5vh; */
+}
+.userDiv{
+height: 10vh;
+width: 30vw;
+display: flex;
+justify-content:flex-start;
+align-items: center;
+flex-direction: row;
+}
+.createDiv{
+    height: 10vh;
+    width:15vw;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+     color: #222731;
+     font-size: 1.5vh;
+}
+.userAbout{
+    height:10vh;
+    width: 30vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #222731;
+}
+.followDiv{
+    height: 12vh;
+    width: 35vw;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    background: #F6F8FF;
+    border-radius: 1vh;
+}
+.followDiv p,.followDiv h1{
+    color: #222731;
+}
+.followDiv p{
+  font-size: 2vh;
+}
+.repos,.follower,.following{
+    height: 10vh;
+    width: 13vw;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+.locationDetail{
+    height: 15vh;
+    width: 40vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.locationDetail img{
+    height: 3vh;
+}
+.userName{
+    color: #222731;
+    font-size: 3vh;
+}
+h2{
+    color: #222731;
+}
+.userLink a{
+color:#0079FF;
+text-decoration: none;
+font-size: 2vh;
+letter-spacing: 0vh;
+}
+.location,.twitter,.github,.github1{
+    height:7vh;
+    width:20vw;
+    display: flex;
+ gap: 2vh;
+    align-items: center;
+    flex-direction:row;
+}
+.locationDetail a,.locationDetail p{
+color: #222731;
+font-size: 2vh;
+text-decoration: none;
+}
+.content{
+    height:50vh;
+    width: 50vw;
+    background-color: #FEFEFE;
+    border-radius:1vh;
+    display: flex;
+    flex-direction:row;
+}
+.emoji{
+    height:50vh;
+    width:40vw;
+    font-size: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 4vw;
+    color: #222731;
+ }
+ .emoji a{
+    text-decoration: none;
+    color:#0079FF;
+ }
+ .emojiDiv{
+    font-size:5vh;
+  }
